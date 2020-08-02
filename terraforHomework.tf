@@ -35,7 +35,7 @@ resource "aws_vpc" "homework_VPC" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "homework"
+    Name = "homework_vpc"
   }
 }
 resource "aws_subnet" "homework_public_subnet" {
@@ -43,7 +43,7 @@ resource "aws_subnet" "homework_public_subnet" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "homework_vpc"
+    Name = "homework_subnet_pub"
   }
 }
 resource "aws_subnet" "homework_private_subnet" {
@@ -51,7 +51,7 @@ resource "aws_subnet" "homework_private_subnet" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "homework_subnet"
+    Name = "homework_subnet_private"
   }
 }
 resource "aws_internet_gateway" "gw" {
